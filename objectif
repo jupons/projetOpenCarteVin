@@ -1,7 +1,13 @@
-Créer une application Shiny afin de connaitre le nombre de vin IGP/AOP/Sans IG par région de France
+Créer une application Shiny afin de connaitre le volume de vin sorti sous IGP, ou AOP ou sans IG; par région/département; en France
 Sur l'interface on doit voir:
   - Un titre
   - Une liste déroulante pour choisir l'année
   - Une carte avec les régions de France
-  - 3 graphiques (IGP/AOP/sans IG)
-  - Une légende
+  - 3 graphiques type courbe (IGP/AOP/sans IG)
+  - Une légende pour le gradient de couleur pour les régions de la carte des vins
+  - classement des 3 régions les plus productrices/ des 3 départements les plus producteurs pour la région sélectionnée 
+  - mise en forme des noms du classement (1er or, 2er argent, 3eme bronze)
+  - carte interractive, si clic sur région alors graphique de la production souhaitée apparait
+  - sélectionneur pour naviguer entre les années
+  
+  
