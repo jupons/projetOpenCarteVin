@@ -22,16 +22,22 @@ server <- function(input, output) {
     leaflet() %>%
       
       setView(lat = 46.6033, lng = 1.8833, zoom = 5)%>%
-      addPolygons(data = departements, color = "white", weight = 1, fillOpacity = 0.5, fillColor = "blue")%>%
-      addPolygons(data = regions, color = "white", weight = 1, fillOpacity = 1, fillColor = "red")
-  })
-
-  
+      addPolygons(data = departements, 
+                  fillColor = "purple", 
+                  weight = 1, 
+                  opacity = 1, 
+                  color = "blue", 
+                  fillOpacity = 0.2, 
+                  group = "Département",
+                  popup = paste("Département:", departements$nom)) %>%
+      addPopups(lng = mean(departements$geometry),
+                lat = mean(departements$geometry),
+                popup = paste("<a href='https://example.com/departements/", departements$nom, "'>", departements$nom, "</a>"))
+    
+    })
 }
 
 shinyApp(ui, server)
-
-
 
 
 
