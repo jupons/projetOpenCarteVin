@@ -1,4 +1,5 @@
-Carte qui affiche les régions à partir d'un fichier shapefil :
+Carte qui affiche les régions à partir d'un fichier shapefile :
+2 fichiers shapefile : 1 avec les régions, 1 avec les départements
 Sous les régions, les départements sont affichés mais ils sont masqués par les régions
 il faut ajouter une fonction pour faire apparaître les départements quand on clique, et mettre les régions en différentes couleurs en fonction des données
 
