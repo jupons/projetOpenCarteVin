@@ -1,3 +1,8 @@
+Carte qui affiche les régions à partir d'un fichier shapefil :
+Sous les régions, les départements sont affichés mais ils sont masqués par les régions
+il faut ajouter une fonction pour faire apparaître les départements quand on clique, et mettre les régions en différentes couleurs en fonction des données
+
+
 library(shiny)
 library(leaflet)
 library(sf)
