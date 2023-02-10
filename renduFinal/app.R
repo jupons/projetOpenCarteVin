@@ -57,7 +57,7 @@ recupDataGraph <- function(typeVin, anneeSel, regClick=76) {
 
 ui <- fluidPage(
     tags$head(tags$style(HTML(".leaflet-container {background: #ffffff;}"))),
-    titlePanel("France"),
+    titlePanel("Carte Région Viticole"),
     sidebarLayout(
         mainPanel(leafletOutput("map")),
         sidebarPanel(selectInput(inputId = "anneeSelect", label="",
