@@ -2,6 +2,7 @@ Créer une application Shiny afin de connaitre le volume de vin sorti sous IGP, 
 Sur l'interface on doit voir:
   - Un titre
   - Une liste déroulante pour choisir l'année
+  - Une liste déroulante pour choisir la région (au cas ou la selection sur la carte ne marche pas)
   - Une carte avec les régions de France
   - 3 graphiques type courbe (IGP/AOP/sans IG)
   - Une légende pour le gradient de couleur pour les régions de la carte des vins
@@ -12,7 +13,7 @@ Sur l'interface on doit voir:
   - bouton de téléchargement des informations en format PDF, contenant: graphiques, cartes, année, 3 premières plus grosses production de la région sélectionnée
   - mise à jour automatique des graphiques quand on clique sur une région 
   
-Pour les données que l'on peut fournir sur la carte :
+Pour les données que l'on peut fournir en plus sur la carte :
   - type de cépage
   - les plus grands crues par région
   
