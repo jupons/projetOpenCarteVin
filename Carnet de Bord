@@ -8,3 +8,6 @@ Ensuite, nous avons travailler à plusieurs sur la création du code : certains 
 De son côté, Jules à fait des maquettes du résultat final pour guider les codeurs dans leurs quête. 
 Pendant ce temps là, d'autres membres du groupe ont travaillé sur l'organisation des datas avec la création de nouveaux fichiers csv, exploitables et permettant d'enrichir la carte interactive.
 Pour finir, d'autres membres ont travaillé sur l'organisation du dépôt distant, la gestion des ressources textuels type journal de bord, README, améliorations possibles...
+
+Contributions des membres : 
+Kalden : J'ai essayé de travailler sur le code mais j'ai renocntré beaucoup de problèmes que je n'ai pas su résoudre via internet. Par conséquent, je me suis tourné vers la rédaction de documents : Journal de bord, améliorations possibles, README. J'ai aussi tenté, sans succès de modifier un document de datas excel. Cependant, je n'arrivais pas à automatiser ma fonction SUMIFS sur l'ensemble du document, et modifier 12961 ligne de tableur excel est très long.
