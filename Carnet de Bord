@@ -14,6 +14,11 @@ En parallèle, d'autres membres du groupe ont travaillé sur l'organisation des 
 Pour finir, d'autres membres ont travaillé sur l'organisation du dépôt distant, la gestion des ressources textuels type journal de bord, README, améliorations possibles...
 
 **Contributions des membres** : 
+
+Jules : J'ai mis en place le lien entre la carte et les données :
+        - appliquer un gradient différent en fonction de la production régionnale de l'année sélectionnée.
+        - faire le lien entre une région cliquée est des graphiques sur la production sur l'année (pas conserver dans le rendu final).
+
 Kalden : J'ai essayé de travailler sur le code mais j'ai renocntré beaucoup de problèmes que je n'ai pas su résoudre via internet. Par conséquent, je me suis tourné vers la rédaction de documents : Journal de bord, améliorations possibles, README. J'ai aussi tenté, sans succès de modifier un document de datas excel. Cependant, je n'arrivais pas à automatiser ma fonction SUMIFS sur l'ensemble du document, et modifier 12961 ligne de tableur excel est très long.
 
 Elsa : Mon objectif lors de ce projet a été de créer un document "objectif", afin de faire une liste de l'ensemble des choses à faire pour arriver à notre objectif final. De plus, j'ai fait des recherches sur comment fonctionnait l'application shiny (quel outil utiliser, package, bouton...) afin de pouvoir transmettre ces informations aux personnes qui ont plus de faciliter que moi a coder.
