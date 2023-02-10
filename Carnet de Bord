@@ -1,21 +1,27 @@
-Le premier jour, nous avons défini un objectif commun pour ce travail de groupe. Nous avons imaginé la création d'une carte interactive recensant la production de différents types de vins en France. 
+Le premier jour, nous avons défini un objectif commun pour ce travail de groupe. Nous avons imaginé la création d'une carte interactive recensant la production de différents types de vins en France, en se basant sur leur SIQO (AOP/IGP/SansIG). 
 Pour cela, il a fallu se répartir les tâches. Nous avons nommé Jules chef de groupe étant donné qu'il était celui-ci avec le plus d'expérience et le plus à l'aise avec les outils numériques. 
-Ensuite, nous avons crée un Etherpad pour la répartition des tâches. Nous avons déconstruit notre objectif final en petités étapes où chacun pouvait se placer librement dessus pour indiquer qu'il allait travailler dessus. 
-Cet Etherpad était aussi un outil intéressant pour se partager des informations et des ressources numériques. 
-La première étape de ce travail de groupe à été de trouver des datas exploitables. Pour cela, nous avons recherché sur " " et nous avons extrait des données de " " que nous avons ensuite nettoyé via un logiciel SIG - QGIS pour qu'elles soient utilisable sur Rstudio. 
-Nous avons partager ces données avec tous les membres du groupe via ISARAcloud.
-Ensuite, nous avons travailler à plusieurs sur la création du code : certains qui s'occupaient de comprendre comment le package Shiny fonctionnait pendant que les autres travaillaient sur la conception de la carte interactive avec la compréhension des packages à disposition. 
-De son côté, Jules à fait des maquettes du résultat final pour guider les codeurs dans leurs quête. 
-Pendant ce temps là, d'autres membres du groupe ont travaillé sur l'organisation des datas avec la création de nouveaux fichiers csv, exploitables et permettant d'enrichir la carte interactive.
+Ensuite, nous avons créé un Etherpad pour la répartition des tâches. Nous avons déconstruit notre objectif final en petités étapes où chacun pouvait se placer librement dessus pour indiquer qu'il allait travailler dessus. 
+Cet Etherpad, en plus d'être un éditeur en Open Source, est un outil intéressant pour se partager des informations et des ressources numériques. 
+
+La première étape de ce travail de groupe à été de trouver des datas exploitables. Pour cela, nous avons recherché sur "data.gouv....." et nous avons extrait des données de " " que nous avons ensuite nettoyées via un logiciel SIG - QGIS pour qu'elles soient utilisables sur Rstudio. 
+Nous avons partagé ces données avec tous les membres du groupe via ISARAcloud (ceci explique le retard au niveau des commits sur GitHub : nous avions d'avord centralisé en première ébauche sur IaraCloud).
+
+Ensuite, nous avons travaillé à plusieurs sur la création du code : certains qui s'occupaient de comprendre comment le package Shiny fonctionnait pendant que les autres travaillaient sur la conception de la carte interactive avec la compréhension des packages à disposition. 
+
+Par ailleurs, Jules a fait des maquettes du résultat final pour guider les codeurs dans leurs quête. Il a su répartir des tâches abordables pour les personnes qui étaient moins à l'aise avec le codage.
+En parallèle, d'autres membres du groupe ont travaillé sur l'organisation des datas avec la création de nouveaux fichiers csv, exploitables et permettant d'enrichir la carte interactive.
+
 Pour finir, d'autres membres ont travaillé sur l'organisation du dépôt distant, la gestion des ressources textuels type journal de bord, README, améliorations possibles...
 
-Contributions des membres : 
+**Contributions des membres** : 
 Kalden : J'ai essayé de travailler sur le code mais j'ai renocntré beaucoup de problèmes que je n'ai pas su résoudre via internet. Par conséquent, je me suis tourné vers la rédaction de documents : Journal de bord, améliorations possibles, README. J'ai aussi tenté, sans succès de modifier un document de datas excel. Cependant, je n'arrivais pas à automatiser ma fonction SUMIFS sur l'ensemble du document, et modifier 12961 ligne de tableur excel est très long.
 
-Elsa : Mon objectif lors de ce projet a été de créer un document "objectif", afin de faire une liste de l'ensemble des choses à faire pour arriver à notre objectif final. De plus, j'ai fait des recherches sur comment fonctionnait l'application shyni (quel outil utiliser, package, bouton...) afin de pouvoir transmettre ces informations aux personnes qui ont plus de faciliter que moi a coder.
+Elsa : Mon objectif lors de ce projet a été de créer un document "objectif", afin de faire une liste de l'ensemble des choses à faire pour arriver à notre objectif final. De plus, j'ai fait des recherches sur comment fonctionnait l'application shiny (quel outil utiliser, package, bouton...) afin de pouvoir transmettre ces informations aux personnes qui ont plus de faciliter que moi a coder.
 
 Valentine : j'ai d'abord fait quelques recherches pour comprendre comment shiny fonctionnait et quels outils il serait pertinent d'utiliser. J'ai aussi écrit quelques lignes de code (document "Liste_téléchargement") pour pouvoir sélectionner l'année pour le vin souhaité et un bouton de téléchargement. Je n'ai néanmoins pas réussi à lier ce code avec nos données. J'ai aussi eu un problème avec git car après avoir fait une maj système de mon Mac, git ne fonctionnait plus. J'ai donc cherché sur internet et il fallait télécharger quelque chose pour que ca refonctionne. Ce téléchargement a pris énormément de temps ce qui m'en a fait perdre beaucoup aussi.
 
 Chloé : Trouver les données des vins, nettoyer ces dernières et les convertir en csv et les ajuster pour qu'elles correspondent au code de l'application que j'ai aidé à réaliser.
 
 Iris : Au commencement de ce projet, j'ai fait des recherches sur différents packages et comment aborder les cartes interactives, utiliser des données et les faire transparaître sur des maps. Il s'avère que le projet demandait des lignes de code bien plus complexes que je ne m'y attendais. Par la suite, j'ai tenté plusieurs créations de cartes avec des données de cartographies. Il fallait ensuite insérer les données viticoles dans la carte mais je n'y suis pas arrivée, ces données-là sont très denses et elles dépassent mes compétences. Avec Elise H., nous avons ensuite modifié la carte interactive pour la rendre cliquable/zoomable + popups.
+
+Lise : création du fichier "Authors", quelques actions de nettoyages du dépot, prise de notes des choses à faire sur l'Etherpad, contribution à la rédaction des améliorations et du carnet de bord, création du fichier Excel comportant notamment un tableau croisé dynamique donnant la somme des volumes de vin et leur SIQO en fonction de la région, du département, de l'année et du mois. Ce tableau a été élaboré suite à la récupération des données nettoyées par Chloé, puis complété par un excel recensant les régions et départements associés. 
