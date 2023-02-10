@@ -1,0 +1,10 @@
+Le premier jour, nous avons défini un objectif commun pour ce travail de groupe. Nous avons imaginé la création d'une carte interactive recensant la production de différents types de vins en France. 
+Pour cela, il a fallu se répartir les tâches. Nous avons nommé Jules chef de groupe étant donné qu'il était celui-ci avec le plus d'expérience et le plus à l'aise avec les outils numériques. 
+Ensuite, nous avons crée un Etherpad pour la répartition des tâches. Nous avons déconstruit notre objectif final en petités étapes où chacun pouvait se placer librement dessus pour indiquer qu'il allait travailler dessus. 
+Cet Etherpad était aussi un outil intéressant pour se partager des informations et des ressources numériques. 
+La première étape de ce travail de groupe à été de trouver des datas exploitables. Pour cela, nous avons recherché sur " " et nous avons extrait des données de " " que nous avons ensuite nettoyé via un logiciel SIG - QGIS pour qu'elles soient utilisable sur Rstudio. 
+Nous avons partager ces données avec tous les membres du groupe via ISARAcloud.
+Ensuite, nous avons travailler à plusieurs sur la création du code : certains qui s'occupaient de comprendre comment le package Shiny fonctionnait pendant que les autres travaillaient sur la conception de la carte interactive avec la compréhension des packages à disposition. 
+De son côté, Jules à fait des maquettes du résultat final pour guider les codeurs dans leurs quête. 
+Pendant ce temps là, d'autres membres du groupe ont travaillé sur l'organisation des datas avec la création de nouveaux fichiers csv, exploitables et permettant d'enrichir la carte interactive.
+Pour finir, d'autres membres ont travaillé sur l'organisation du dépôt distant, la gestion des ressources textuels type journal de bord, README, améliorations possibles...
