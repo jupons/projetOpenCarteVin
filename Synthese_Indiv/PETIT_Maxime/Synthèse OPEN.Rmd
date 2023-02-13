@@ -1,0 +1,78 @@
+---
+title: "Synthèse OPEN"
+author: "Maxime Petit"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  html_document: 
+    
+    code_folding: hide
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+    theme: journal
+    highlight: tango
+    toc_depth: 6
+  pdf_document: 
+    toc: yes
+    toc_depth: 5
+    number_sections: yes
+link-citations: TRUE
+# nocite: '@*' # pour citer des ressources dans le rapport.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# [Introduction]{.underline}
+
+##Comprendre l'IA
+
+L'intelligence artificielle est née dans les années 1950 avec l'objectif de faire produire des tâches humaines par des machines mimant l'activité du cerveau. Face aux déboires des premières heures, deux courants se sont constitués. D'un côté, on a une intelligence artificielle dite « forte » qui vise à concevoir une machine capable de raisonner comme l'humain, avec le risque supposé de générer une machine supérieure à l'Homme et dotée d'une conscience propre. Certains chercheurs estiment qu'atteindre un tel objectif est impossible mais cette voie de recherche est toujours recherchée et fait l'objet d'une grande attention aujourd'hui. D'un autre côté, on a une intelligence artificielle dite « faible » mettant en œuvre les technologies disponibles pour concevoir des machines capables d'aider les humains dans leurs tâches. Cela mobilise de nombreuses disciplines, de l'informatique aux sciences cognitives en passant par les mathématiques. Cette approche génère tous les systèmes spécialisés et performants qui peuplent aujourd'hui notre environnement comme identifier des dates dans les textes par exemple. Ces systèmes sont limités dans leurs capacités d'adaptation, ils doivent être manuellement adaptés pour accomplir d'autres tâches que celles pour lesquelles ils ont été initialement conçus. Certains systèmes d'IA utilisent aussi la logique. Cette approche, la plus ancienne, s'appuie sur l'idée que nous raisonnons en appliquant des règles logiques (déduction, hiérarchisation permanente). Ces systèmes appliquent différentes méthodes fondées sur l'élaboration de modèles qui sont ensuite utilisés par des systèmes de raisonnement logique pour produire des faits nouveaux. On a baptisé ces systèmes « experts » car ils sont capables de reproduire les mécanismes cognitifs d'un expert. Les IA sont utilisées dans le domaine médical pour jouer le rôle des experts. Les plus célèbres, Mycin (identification d'infections bactériennes) ou Sphinx (détection d'ictères) s'appuient sur les connaissances médicales dans un domaine et une formalisation de raisonnements des spécialistes qui utilisent ces connaissances pour aboutir à un diagnostic.
+
+# [Utilisation de l'IA dans le domaine médical :]{.underline}
+
+Les systèmes actuels d'aide à la décision ou de gestion de connaissances sont les plus sophistiqués. La mécanique algorithmique est la même mais les machines sont plus puissantes. Ils cherchent désormais à épauler le médecin dans un raisonnement fondé sur des connaissances médicales. D'autres systèmes exploitent l'expérience passée. Cette approche est dite numérique et raisonne sur les données. Le système cherche des régularités dans les données disponibles pour extraire des connaissances, sans modèle préétabli. Cette méthode se développe aujourd'hui grâce à l'augmentation de puissance des ordinateurs et à l'accumulation de données, le big data. Les modèles procèdent aujourd'hui par apprentissage automatique, une méthode fondée sur la représentation mathématique et informatique de neurones biologiques, une analogie lointaine avec le fonctionnement cérébral. Il existe aussi des algorithmes d'apprentissage profond (deep learning) dont l'usage se développe depuis une dizaine d'années. Des applications de deep learning existent en traitement d'images, par exemple pour repérer de possibles mélanomes sur les photos de peau ou bien pour dépister des rétinopathies diabétiques sur des images de rétine. La robotique est aussi en pleine expansion et vise à augmenter l'autonomie des machines en les dotant de capacités perceptuelles, décisionnelles et d'action. On trouve la chirurgie assistée par ordinateur qui permet d'améliorer la précision des gestes ou d'opérer à distance. Il existe aussi les prothèses intelligentes qui réparent voire augmentent le corps humain, ou encore les robots d'assistance aux personnes âgées.
+
+En outre, le contexte de crise sanitaire Covid-19 a été caractérisé par une accélération de la transformation digitale de notre système de santé. La prise en charge du cancer a notamment vu l'intelligence artificielle montrer son potentiel. L'intelligence artificielle en santé ouvre des perspectives très prometteuses pour améliorer la qualité des soins au bénéfice du patient et réduire leur coût à travers une prise en charge plus personnalisée et prédictive mais aussi leur sécurité grâce à la décision médicale et une meilleure traçabilité. Les possibilités de progrès dans le domaine de la prise en charge du cancer ouvertes par l'intelligence artificielle sont, en effet, tout à fait considérables. En 2016, Microsoft s'est engagé dans plusieurs programmes d'IA visant à assister les cancérologues. Ces programmes portent sur le traitement des données de recherche disponibles ou mettent en jeu des dispositifs plus opérationnels comme l'analyse massive des clichés de tumeurs.
+
+# [L'intelligence artificielle en progrès dans ce domaine :]{.underline}
+
+Ces dernières années, l'intelligence artificielle (IA) a fait des progrès considérables dans le domaine médical et présente un grand potentiel pour les développements futurs. Voici quelques-unes des applications actuelles de l'IA en médecine : Le diagnostic : Les algorithmes d'IA peuvent aider les professionnels de la médecine à diagnostiquer diverses conditions médicales, comme le cancer, les maladies cardiovasculaires et les maladies oculaires, en analysant les images médicales et les données des patients. Par exemple, les algorithmes d'IA peuvent analyser des images IRM pour détecter des cancers et d'autres conditions médicales avec une grande précision. Découverte de médicaments : L'IA est également utilisée pour accélérer le processus de découverte de médicaments. En analysant de grandes quantités de données provenant de diverses sources, les algorithmes d'IA peuvent identifier de nouvelles cibles médicamenteuses et aider à la conception de nouveaux médicaments. Analyse prédictive : L'IA peut analyser les données des patients pour prédire les conditions médicales futures, comme les maladies cardiaques ou les maladies chroniques, et aider les professionnels de la santé à prendre des mesures préventives. Aide à la décision clinique : L'IA peut également être utilisée pour aider les professionnels médicaux à prendre des décisions cliniques, comme le choix de la meilleure option de traitement pour un patient.
+
+À l'avenir, l'IA pourrait révolutionner la façon dont les professionnels de la santé diagnostiquent, traitent et préviennent les maladies. Par exemple, l'IA pourrait un jour être capable de faire des prédictions en temps réel sur la propagation des maladies infectieuses et aider à contenir les épidémies. L'IA peut également être utilisée pour personnaliser les plans de traitement des patients, en tenant compte de leurs données génétiques et de leur mode de vie. En outre, l'IA peut améliorer l'accès aux soins de santé en permettant des consultations à distance et en contribuant à remédier à la pénurie de médecins dans les zones mal desservies.
+
+Toutefois, il est important de noter que l'IA en médecine n'en est qu'à ses débuts et que de nombreux défis restent à relever. Par exemple, les algorithmes d'IA doivent encore être développés et validés pour garantir leur précision et leur sécurité. En outre, les problèmes d'éthique et de confidentialité doivent être résolus pour garantir la protection des données des patients. L'IA doit être utilisée en complément des professionnels de santé qualifiés, et non en remplacement, pour garantir des soins de santé sûrs et efficaces.
+
+En conclusion, l'IA a un potentiel énorme pour faire progresser le domaine médical, et les développements futurs dans ce domaine auront probablement un impact significatif sur la façon dont les professionnels de la médecine diagnostiquent, traitent et préviennent les maladies.
+
+# [Des exemples d'application de l'IA dans le domaine médical :]{.underline}
+
+Verily : Son objectif est de trouver des signes pour prédire certaines maladies comme le diabète. Pour commencer le projet Verily sélectionne 10 000 personnes à suivre pour récupérer toute la data possible. Les 10 000 personnes seront l'échantillon utilisé pour la progression et l'apprentissage de l'IA. Cette souche de 10 000 personnes viendra impacter la vie de milliers d'autres personnes (si ce n'est pas des millions).
+
+Si le soin prédictif n'est pas encore 100 % possible, l'aide à la décision est déjà réalisé comme le cas de Watson le logiciel d'Amazon (Watson utilise l'« Informatique Cognitive »). Watson récupère et traite la data du milieu de la cancérologie. Cela permet de proposer un suivi personnalisé et d'aider le médecin à adapter son diagnostic en fonction de chaque cas (typique ou atypique, c'est la toute la force de l'IA).
+
+Il est donc possible d'assister les médecins dans un diagnostic complet, mais l'IA assiste les chirurgiens aux Etats-Unis. Pour préciser, la chirurgie cardiaque fait une avancée prodigieuse avec l'exemple d'OPTIMA. En effet, elle va recréer un cœur virtuel pour assister au maximum le chirurgien dans la bonne réussite de l'opération. Une chirurgie virtuelle permet de mieux diagnostiquer le problème et de tester sur un cœur virtuel avant de procéder à la véritable opération.
+
+La suite des exemples sur l'intelligence continue avec la création d'un vaccin par SAM (Search Algorithm for Ligands). Après son apprentissage supervisé, l'IA comprend les composants activant le système immunitaire humain et sait différencier ce qui marche de ce qui n'est pas efficace. C'est avec se principe que l'IA à réussis à développer un vaccin bien plus efficace (contre la grippe) que tout ce qui existe déjà.
+
+# [Conclusion :]{.underline}
+
+Le potentiel de l'IA pour améliorer la prise en charge des patients est infini. Elle offre une occasion unique de donner du sens aux données cliniques afin de permettre des soins de santé pleinement intégrés, plus prédictifs et plus précis. Pour que tous les aspects des solutions d'intelligence artificielle soient satisfaisants, une collaboration étroite entre des spécialistes de données, des médecins, des concepteurs et d'autres experts est nécessaire. Pour résumer, la première application de l'IA est d'améliorer l'efficacité opérationnelle et les performances. Le tri des données aide les administrateurs à optimiser les performances, à accroitre la productivité et à améliorer l'utilisation des ressources existantes. Cela permettrait ainsi un gain de temps et d'argent. Ensuite, l'IA permet d'aider à la prise de décision clinique. Les solutions basées sur l'IA facilitent la combinaison de grandes quantités de données cliniques pour générer une vision globale des patients. L'aide à la prise de décision améliore les résultats des traitements et la santé de la population. L'IA peut permettre la gestion de la santé des patients en combinant les systèmes d'aide à la prise de décision clinique et l'auto-prise en charge des patients. En utilisant l'analyse prédictive avec les patients, les professionnels prendront des mesures préventives, réduiront les risques et économiseront des coûts inutiles. La prise en charge est améliorée mais également la qualité de vie. L'agrégation de millions de données permettra aux hôpitaux de comprendre la corrélation entre certains facteurs comme la génétique ou le comportement. Enfin, il est également possible de responsabiliser le consommateur pour améliorer la prise en charge. Si les patients s'impliquent davantage dans leurs propres soins de santé et comprennent mieux leurs propres besoins, l'introduction de l'IA dans les soins de santé a pour objet de pousser les services de santé à prendre des mesures à leur égard et à les rencontrer en leur fournissant des services de santé quand ils en ont besoin, et non seulement quand ils sont malades.
+
+# [Bibliographie :]{.underline}
+
+« Intelligence artificielle en médecine : cas d'usage \| Microsoft experiences ». Consulté le 10 février 2023. <https://experiences.microsoft.fr/articles/intelligence-artificielle/intelligence-artificielle-medecine/>.
+
+Inserm. « Intelligence artificielle et santé ⋅ Inserm, La science pour la santé ». Consulté le 10 février 2023. <https://www.inserm.fr/dossier/intelligence-artificielle-et-sante/>.
+
+« L'intelligence artificielle (IA) en santé - MACSF ». Consulté le 10 février 2023. <https://www.macsf.fr/responsabilite-professionnelle/ethique-et-societe/ia-en-sante-et-responsabilite>.
+
+Mailabs. « Le secteur médical et ses exemples d'intelligence artificielle à découvrir ! » Consulté le 10 février 2023. <https://www.mailabs.fr/intelligence-artificielle/exemples-intelligence-artificielle/exemples-dintelligence-artificielle-pour-le-secteur-medical/>.
+
+Philips. « Quatre applications de l'IA dans le domaine de la santé \| Philips Healthcare ». Consulté le 10 février 2023. <https://www.philips.fr/healthcare/nobounds/four-applications-of-ai-in-healthcare>.
+
+« L'Intelligence artificielle au service de la santé \| Stratégie nationale pour l'intelligence artificielle ». Consulté le 10 février 2023. <https://www.intelligence-artificielle.gouv.fr/fr/secteurs-prioritaires/l-intelligence-artificielle-au-service-de-la-sante>.
