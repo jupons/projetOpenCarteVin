@@ -1,0 +1,262 @@
+---
+title: "Logiciel libre - Synthèse personnelle pour le module OPEN (Isara)"
+author: "PICAUD Lise"
+date: '2023-02-13'
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+    fig_caption: yes
+    number_sections: yes
+    toc_depth: 3
+    toc_float: yes
+  html_document:
+    toc_depth: '3'
+    df_print: paged
+  pdf_document:
+    number_sections: yes
+    toc_depth: 3
+    toc_float: yes
+    higlight: tango
+bibliography: OPEN BibTeX.bib
+csl: isara-iso-690.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Ce document a pour but d'aprendre des notions sur les **logiciels libres**\*, avec des explications en faveur de ce thème, afin de donner envie de mieux les aborder. L'objectif est que la personne qui lit ce document puisse envisager de substituer progressivement les **GAFAM**\* .
+
+Les informations transmises ci-dessous sont largement inspirées d'un des cours du module optionnel **OPEN** (Outils, Perspectives et Enjeux du Numérique) enseigné à l'Isara, école d'ingénieur-es spécialisée en agriculture et agroalimentaire [@bongiraud_logiciels_2023], complétées par des recherches personnelles.
+
+La mise en forme est destinée à un format html [@yixuan_architect_2021]. Les mots suivis d'une astérisque sont définis dans un glossaire disponible à la fin du document, suivi d'une bibliographie. Bonne lecture !
+
+# Notions sur internet et les logiciels
+
+Il est nécessaire de comprendre l'histoire d'internet, avant de s'intéresser plus en détails sur les logiciels libres.
+
+## Histoire d'internet
+
+**Internet**\* a plus de 50 ans, c'est le réseau des réseaux. Il tire son origine de travaux d'étudiants et de l'intérêt de l'armée américaine. En effet, c'est un **réseau acentré** (pas de centre), qui permet de faire communiquer les informations par différents chemins, tuyaux.
+
+Le web ou ***www*** (*world wide web*)\* est ensuite apparu en 1989. Il relie un ensemble de données par des liens hypertextes, sur Internet. Au début des 90s, le Centre Européen de Recherche Nucléaire (CERN), basé à Genève (Suisse), crée le HyperText transfert protocol (***http***), c'est le tout premier serveur web !
+
+Puis vient la **centralisation** au milieu des années 1990. Celle-ci se démocratise peu à peu, avec l'arrivée de start ups actuellement connues de tous. On pense à *Google*, dont les débuts ont commencé dans un garage, mais aussi aux réseaux sociaux tels que *Facebook*. Il y a une centralisation virtuelle du réseau qui s'opère, avec des services comme les moteurs de recherche.
+
+Actuellement, nous utilisons pour la plupart [**3 ordinateurs quotidiennement**]{.ul} : le PC, le téléphone (smartphone) et le Cloud.
+
+![](cloud.png "CLOUD")
+
+Concernant le **Cloud\***, ce n'est pas un nuage, mais plutôt un ordinateur possédant toutes nos données. Nous ne pouvons pas voir ou modifier le code source, le cloud n'est pas sous contrôle. Le cloud héberge de nombreux éléments (**SaaS**\* , **PaaS**\* , **IaaS**\*) assimilés à des services.
+
+## Enjeux des logiciels libres
+
+"***Les données sont le pétrole du XXIème siècle***" ou pour reprendre le lanceur d'alerte Edward Snowden**\*** : "*Prétendre que votre droit à une sphère privée n'est pas important parce que vous n'avez rien à cacher n'est rien d'autre que de dire que la liberté d'expression n'est pas essentielle, car vous n'avez rien à dire* [@oing_du_conseil_de_leurope_societe_2017].
+
+Des sociétés telles que les **GAFAM** viennent pomper nos données (et métadonnées) jusque dans nos poches. La centralisation évoquée précédemement est un enjeu majeur, dans la mesure où il existe des silos de données gigantesques. [**Les 5 plus grosses firmes américaines centralisent 75% des données des utilisateurs de la planète.**]{.ul} La plupart de ces GAFAM héberge également des services utiles tels que *Doctolib* qui est hébergé par Amazon Cloud Sevice (ACS). Prenons l'exemple de *Facebook* : en échange d'un service ne valant quasiment rien, la société récupère nos données. *Facebook*, c'est 6\$/utilisateur/an.
+
+![](GAFAM.png "GAFAM"){width="527"}
+
+À titre de comparaison, vous avez sûrement enetendu parler d'exploitations en élevage intensif dans lesquelles les cochons sont entassés, mais nourris et logés gratuitement ; nous sommes en quelque sorte les "cochons du numérique" face aux **data broker\*** qui achètent entre autres des données à Google, pour les croiser et en faire de la publicité ciblée.
+
+N'oublions pas **Edward Snowden** : travaillant pour la National Security Agency (NSA) aux États-Unis, il a fait fuiter leurs agissements en juin 2013. Ces dernières conféraient un accès aux données qui servaient à la NSA, avec entre autres le jeu *AngryBird* qui était une porte d'entrée au vol des données [@millochau_angry_2014].
+
+Avec la menace de ces dérives, il y a eu la mise en place d'un Réglement Général pour la Protection des Données (**RGPD**\*) qui s'applique à l'échelle européenne, rejoignant la loi informatique et liberté. Les principaux objectifs du RGPD sont :
+
+-   **renforcer** sensiblement les droits des citoyens en leur donnant plus de maîtrise sur leurs données personnelles
+
+-   **crédibiliser** la régulation des données à travers un systèe de pénalités
+
+-   **instaurer** de nouveaux droits pour les ressortissants de l'UE
+
+-   **responsabiliser** les acteurs traitant des données
+
+Toutefois, le Clarifying Lawful Overseas Use of Data (**C.L.O.U.D. Act\***) est une loi américaine qui pioche des données comme bon lui semble, s'installe progressivement en Europe et s'applique au lieu du siège social de l'entreprise. Il y a eu un accord bilatéral (**Privacy Shield**) entre l'Europe et l'Amérique, mais il ne s'applique heureusement plus grâce à l**'arrêté Schrems** publié suite au jugement à la Cour de justice de l'UE, en raison d'une non conformité au RGPD.
+
+Par ailleurs, si l'on étudie attentivement les Conditions d'utilisations **(Terms of services) de *Microsoft***, on constate qu'en acceptant lesdites conditions, on confère à cette entrerise une licence de propriété intellecturelle gratuitement : "*vous accordez à Microsoft une licence de propriété intellectuelle internationale à titre gratuit pour utiliser Votre Contenu et par exemple, le copier, le conserver, le transmettre, modifier son format, le diffuser via des outils de communications et l'afficher sur les Services*". Ainsi, les géants de la Silicon Valley peuvent récupérer nos idées et innovations avant même qu'on dépose un brevet. Ils ont accès à nos stratégies, notre business... Point important à garder en tête : nos échanges impliquent nos proches ! Comme écrit dans le titre d'un article, "***Google c'est comme la cigarette : c'est votre choix mais il impacte les autres**"* [@protais_donnees_2019]. Cela fait par exemple référence au fait qu'il lit nos mails pour faire de la publicité ciblée.
+
+Voici une liste des [**principaux dangers des géants d'internet**]{.ul} :
+
+\- frein à l'innovation
+
+\- espionnage industriel
+
+\- surveillance gouvernementale
+
+\- société panoptique (du fait de se sentir observé, on ne peut pas s'exprimer librement)
+
+\- dépendance (les services rendus sont tellement bien faits qu'il est difficile de s'en passer car cela engendre des coûts importans)
+
+\- web fermé
+
+\- web centralisé
+
+\- vie privée
+
+Selon l'adage "***Code is law***", "*celui qui écrit le code décide de ce que les utilisateurs peuvent faire*" (Lawrence Lessig). En effet, sans le code source, on ne peut ni changer le logiciel, ni disposer de liberté. Nous allons ainsi constater tout l'intérêt des logiciels libres.
+
+# Offres en logiciels libres
+
+Si on résume la Genèse du libre : l'imprimante et le Hippie, le Finlandais, les manchots... et on arrive à ***GNU/Linux\****.
+
+![](GNU%20Linux.png "GNU/Linux")
+
+La part de marché des logiciels libres connaît une hausse fulgurante ; le marché du logiciel libre en France a été multiplié par 40 en moins de 20 ans d'après le SILL\* et le CNIL. [@cnill_cnll_2022 ; @sill_socle_2022 ; @siesta_graphique_2008].
+
+Concernant l'évolution de la part de marché du logiciel libre, l'histogramme ci-dessous nous montre sa croissance (en %, pas de données pour 2008 et 2010).
+
+```{r}
+evolPDM <- read.csv("evolPDM.csv", header=TRUE, dec=",", sep=";", row.names=1)
+histPDM <- barplot(PDM~Annee,data=evolPDM) 
+```
+
+Pour approfondir l'analyse des données, voici une **ACP**. Les données ont été trouvées sur le site du CNLL, avant d'être sélectionnées et triées dans un tableur, puis ce dernier a été exporté en format csv pour être exploité.
+
+[*NB*]{.ul} *: quasiment tous les programmes en "open source" sont libres. Des simplifications ont été faites mais l'open source perd parfois l'éthique du logiciel libre [@gnu_quest-ce_nodate].*
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+leader <- read.csv("growth drivers of Open Source.csv", header=TRUE, dec=",", sep=";", row.names=1)
+```
+
+```{r}
+names(leader) 
+library(FactoMineR)
+acpleader <- PCA(leader,graph=FALSE)
+barplot(acpleader$eig[,2],main = "Valeurs propres")
+```
+
+Grâce au **graphique des valeurs propres** des moteurs de croissance de l'Open Source en 2022, nous savons que nous allons étudier assurément les deux premiers axes. Nous appliquons l'analyse à l'aide de la projection des individus et du cercle des valeurs propres.
+
+```{r}
+plot.PCA(acpleader, main ="Projection des individus")
+```
+
+Pour la **projection des inidvidus** des moteurs de croissance de l'Open Source en 2022 :
+
+-   L'axe horizontal indique le poids monétaire et donc la part de marché. SaaS est à 140m€ tandis que les IA et le BigData ont un poids beaucoup plus imposant avec 1740m€.
+
+-   L'axe vertical indique la croissance annuelle moyenne. Les télécommunications sont en retrait par rapport aux autres, tandis que les SaaS, IaaS et PaaS enregistrent une belle croissance.
+
+```{r}
+plot.PCA(acpleader,choix="var", main ="Cercle des valeurs propres")
+```
+
+Le **cercle des valeurs propres** des moteurs de croissance de l'Open Source 2022 nous montre, sans surprise, que la valeur (poids monétaire) est fortement corrélé à la PDM (part de marché).
+
+## Typologie des services rendus
+
+"***Le logiciel libre est au numérique ce que la bio, le local et les AMAP sont à l'agriculture et l'alimentation***". Comme écrit sur le framablog, "les AMAP se composent d'hommes et de femmes qui ont décidé de s'organiser pour ne plus subir un système jugé déloyal" [@siltaar_les_2010].
+
+Le libre fait référence à un logiciel qui a une licence et qui respecte [**4 libertés fondamentales**]{.ul} :
+
+-   **Utiliser** : photoshop est inutilisable dans certains pays
+
+-   **Étudier** : on peut étudier le logiciel (le plat cuisiné) car il est livré avec le code source (la recette)
+
+-   **Partager** : on doit repartager à l'identique
+
+-   **Modifier** : on y contribue car c'est souvent pour l'améliorer
+
+Parmi les alternatives pour copier, utiliser, étudier, modifier ou diffuser, il y a ***CreativeCommons*** ou ***CopyLeft*** (gauche d'auteur, copie laissée).
+
+Le libre est omniprésenent, il peut être transposé dans divers domaines, avec des options spécifiques payantes, des contrats de service. Pour la sécurité par exemple, la gendarmerie utilise Linux, LTS (support long terme) de Ubuntu (système d'exploitation GNU/Linux). Il serait inétressant de davantage l'utiliser pour remplacer ce qui est non libre comme par exemple dans l'IoT (Internet of things) : les caméras connectées, google home, l'asssitante vocale d'amazon alexa, les sextoys connectés, la domotique... mais aussi dans l'agriculture : données météo, machines agricoles équipées, big data agricole [@cochelin_poule_2018].
+
+Ainsi le libre ne s'arrête pas au logiciel, le libre est un système d'organisation à part entière.
+
+***Pourquoi utiliser du libre ?***
+
+-   gratuit au début, puis adpatation facile lors de la croissance
+
+-   maitrise du code (.odt ouvert)
+
+-   interopérabilité
+
+-   réutilisation de briques existantes
+
+-   faible coût d'acquisition
+
+-   qualité et sécurité (auditables)
+
+-   pérennité
+
+-   éthique
+
+Par ailleurs, le libre est cohérent avec les 3 piliers du développement durable.
+
+![](Libre%20DD.png "Libre DD"){width="445"}
+
+## Quelques exemples
+
+[5 développeurs sur 6 utilisent ou ont déja utilisé des composants/outils open source]{.ul}. Voici la description de quelques exemples utiles pris sur *Wikipédia* (pour un aperçu général) ainsi que mes *commentaires* en tant qu'utilisatrice.
+
+![](OpenSourceExemples.png "Logos d'outils Open Source utiles")
+
+***Nextcloud*** : logiciel libre de site d'hébergement de fichiers et plateforme de collaboration. *Une belle alternative à Google Drive.*
+
+***Framasoft*** : réseau d'éducation populaire consacré principalement au logiciel libre, soutenu par l'association du même nom. Il possède les mêmes services que d'autres géants d'internet et sont à l'origine de la campagne "*Dégooglisons Internet*". *Étant utilisatrice, je peux citer Framaforms, Framapad, Framadate, Framacalc... J'ai même découvert qu'il existait Framagit !*
+
+***Leaflet*** : bibliothèque JavaScript libre de cartographie en ligne, notamment utilisée par OpenStreetMap. *Découvert grâce au projet OPEN pour la carte des vins.*
+
+***OpenStreetMap*** : projet collaboratif de cartographie en ligne, qui vise à constituer une base de données géographiques libre et ouverte. *Évoqué lors du "Projet Approfondi en Sciences des Données" des SIG sur Qgis/ArcGis.*
+
+***GIMP*** : outil d'édition et de retouche d'image, diffusé sous la licence GPLv3 comme un logiciel gratuit et libre. *J'ai fait mes premières retouches photos sur ce logiciel ;)*
+
+# Conclusion
+
+Ainsi, ce rapport de synthèse aborde les principaux enjeux autour des logiciels libres, de l'arrivée d'internet aux nouveaux moyens de communication, il montre l'intérêt de se tourner vers les logiciels libres, notamment pour davantage de sécurité, d'adaptabilité, de coût, mais également en termes d'éthique et pérennité.
+
+# Glossaire
+
+**data broker**
+
+:   Ces courtiers en données sont des entreprises qui collectent ou achètent des données à d'autres entreprises. Ces entreprises recherchent des informations utiles sur les utilisateurs, légalement ou non, au détriment de ces derniers. Avec plus de 160 milliards d'euros de revenus générés par an, cette activité lucrative se développe [@jobphoningcom_data_2020].
+
+**C.L.O.U.D. Act**
+
+:   Le Claryfying Lawful Overseas Use of Data Act est une loi fédérale des États-Unis adoptée en 2018. Elle concerne l'accès aux données de communication, notamment opérées dans le Cloud, quelque soit leur localisation. Il a été une menace américaine au RGPD européen [@serda_conseil_cloud_2021].
+
+**CLOUD**
+
+:   Ce "nuage" est composé de nombreux serveurs distants interconnectés et hébergent des applications et données. Le cloud computing (informatique dans les nuages) est "l'utilisation de la mémoire et des capacités de calcul des ordinateurs et des serveurs répartis dans le monde entier et liés par un réseau" [@cnil_cloud_nodate].
+
+**GAFAM**
+
+:   Acronyme renvoyant aux cinq plus grandes plateformes numériques : Google, Apple Facebook, Amazon, Microsoft. Il y a également d'autres entreprises qui tentent de se faire une place : Netflix, AirbnB, Tesla, Uber et BATX (Chine).
+
+**IaaS / PaaS / SaaS**
+
+:   -   "L'infrastructure en tant que service (IaaS) fournit le matériel des services Cloud, notamment les serveurs, le réseau et le stockage.
+
+    -   La plateforme en tant que service (PaaS) vous offre tout ce qui est disponible dans l'IaaS plus le système d'exploitation et les bases de données.
+
+    -   Les logiciels (software) en tant que service (SaaS) offrent la meilleure assistance et fournissent tout à vos utilisateurs, sauf leurs données." [@intel_iaas_nodate].
+
+**Internet**
+
+:   "Ensemble de réseaux mondiaux interconnectés qui permet à des ordinateurs et à des serveurs de communiquer efficacement au moyen d'un protocole de communication commun (IP). Ses principaux services sont le Web, le FTP, la messagerie et les groupes de discussion" [@insee_definition_nodate].
+
+**GNU/Linux**
+
+:   Système d'exploitation développé dans le but que les utilisateurs aient la liberté dans leurs activités informatiques [@gnu_quest-ce_nodate].
+
+**Logiciel libre**
+
+:   Un logiciel libre répond à 4 libertés essentielles (fonctionner, étudier, redistribuer, distribuer) dont l'accès au code source est néceassaire. Il peut être commercial. [@gnu_quest-ce_nodate].
+
+**RGPD/GDPR**
+
+:   Le Réglement Général pour la Protection des Données s'appuie sur la confiance, la responsabilité et la transparence du traitement des données. Tout organisme peut être concerné, dès lors qu'il est établi sur le territoire de l'UE ou que son activité cible directement des résidents européens [@cnil_rgpd_nodate].
+
+**SILL**
+
+:   Le Socle Interministériel de Logiciels Libres est une liste de logiciels libres que les administrations publiques recommandent [@datagouv_socle_2020].
+
+**SNOWDEN** **Edward**
+
+:   Lanceur d'alerte grâce à qui le monde entier a pris connaissance de la surveillance de masse. Il est notamment connu pour avoir dévoilé les secrets de la National Security Agency (NSA) qui est responsable de l'espionnage de masse de chefs d'État et de citoyens ordinaires [@amnesty_international_edward_nodate].
+
+# Bibliographie
