@@ -1,0 +1,13 @@
+name: CarteRegionsViticoles
+title: CarteRegionsViticoles
+username:
+account: jupons
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8290543
+bundleId: 6837416
+url: https://jupons.shinyapps.io/CarteRegionsViticoles/
+when: 1676202361.48899
+lastSyncTime: 1676202361.489
+asMultiple: FALSE
+asStatic: FALSE
